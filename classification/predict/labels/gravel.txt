@@ -1,0 +1,4 @@
+1.00 gravel
+0.00 sedimentary
+0.00 cracked_rocks
+0.00 sand
