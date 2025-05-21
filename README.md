@@ -63,7 +63,7 @@ from ultralytics import YOLO
 model = YOLO('yolov8n-cls.pt')  # Classification model
 ```
 
-### 4. 🏋️‍♂ Train the Model
+### 4.  Train the Model
 
 ```python
 model.train(data='path/to/dataset', epochs=30, imgsz=224)
@@ -105,14 +105,33 @@ print(results)
 ---
 
 
-# Soil Classification using YOLOv8 
-This project leverages the YOLOv8 classification model (yolov8n-cls.pt) to automatically categorize Martian soil textures into four distinct classes:
-- Sand
-- Sedimentary
-- Gravel
+# Soil Classification using YOLOv8:
+
+This project utilizes the **YOLOv8 classification model** to categorize soil textures from NASA Mars surface imagery into four distinct types:
+
+- Sand  
+- Sedimentary  
+- Gravel  
 - Cracked Rocks
+  
+---
+
 The dataset utilized is derived from **Mars surface image (Curiosity rover) labeled data set**.
 The dataset was imported via **Roboflow**.
+
+Dataset Structure:
+```
+soil_dataset/
+├── train/
+│   ├── sand/
+│   ├── gravel/
+|   ├── sedimentary/
+|   ├── cracked_rocks/
+├── val/
+├── test/
+```
+
+---
 
 - Model used: YOLOv8n-cls (Nano version — optimal for fast training/inference and limited hardware)
 - Framework: Ultralytics YOLOv8
